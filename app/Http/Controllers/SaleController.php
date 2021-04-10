@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Car;
 use App\Models\Sale;
+use App\Mail\InvoiceMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class SaleController extends Controller
 {
@@ -53,9 +55,17 @@ class SaleController extends Controller
             'car_id'        => $request->car_id
         ];
 
-        Sale::updateOrCreate(['id' => $request->sale_id], $arr_data);
+        $data = Sale::updateOrCreate(['id' => $request->sale_id], $arr_data);
 
-        return redirect()->route('sale.index')->with('message', '<div class="alert alert-success">Penjualan Berhasil ditambahkan</div>');
+        if($request->sale_id){
+            $message = "Diperbaharui";
+        } else {
+            $result = Sale::with('car')->find($data->id);
+            $message = "Ditambahkan";
+            Mail::to($data->email)->send(new InvoiceMail($result, '::Invoice::'));
+        }
+
+        return redirect()->route('sale.index')->with('message', '<div class="alert alert-success">Penjualan Berhasil '.$message.'</div>');
     }
 
 
