@@ -9,7 +9,7 @@
 
 
 <p align="center">
-    <img src="https://assets.jendela360.com/jendela/assets/images/svg/logo.svg" height="49px" width="auto"> 
+    <a href="https://jendela360.com"><img src="https://assets.jendela360.com/jendela/assets/images/svg/logo.svg" height="49px" width="auto"></a>
 </p>
 
 ## Installer
