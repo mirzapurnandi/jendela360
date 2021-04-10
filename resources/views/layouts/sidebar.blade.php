@@ -29,7 +29,7 @@
                 </a>
             </li>
 
-            <li class="treeview">
+            {{-- <li class="treeview">
                 <a href="#">
                     <i class="fa fa-book"></i>
                     <span>Laporan</span>
@@ -45,7 +45,7 @@
                         <a href="#"><i class="fa fa-circle-o"></i> Data II</a>
                     </li>
                 </ul>
-            </li>
+            </li> --}}
         </ul>
     </section>
   </aside>
