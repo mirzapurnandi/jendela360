@@ -13,8 +13,8 @@ class Car extends Model
 
     protected $fillable = ['nama', 'harga', 'stok'];
 
-    public function sales()
+    public function sale()
     {
-        return $this->hasMany(Sales::class);
+        return $this->hasMany(Sale::class);
     }
 }

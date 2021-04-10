@@ -11,7 +11,7 @@ class Sale extends Model
 
     protected $table = "sales";
 
-    protected $fillable = ['nama', 'email', 'no_hp', 'car_id'];
+    protected $fillable = ['nama', 'email', 'no_hp', 'car_id', 'tanggal_jual'];
 
     public function car()
     {

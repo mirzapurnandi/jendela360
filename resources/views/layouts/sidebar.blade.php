@@ -23,8 +23,8 @@
                     <i class="fa fa-car"></i> <span>Data Mobil</span>
                 </a>
             </li>
-            <li>
-                <a href="#">
+            <li class="{{ request()->routeIs('sale.index') ? 'active' : '' }}">
+                <a href="{{ route('sale.index') }}">
                     <i class="fa fa-bars"></i> <span>Penjualan</span>
                 </a>
             </li>
