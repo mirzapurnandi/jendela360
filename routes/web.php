@@ -26,3 +26,7 @@ Route::group(
         Route::get('/home', [HomeController::class, 'index'])->name('home');
     }
 );
+
+Route::get('/logout', function () {
+    //
+})->name('logout');
