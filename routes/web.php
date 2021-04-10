@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\HomeController;
 
 /*
@@ -20,6 +21,7 @@ Route::get('/', function () {
 
 Route::group(
     [
+        'middleware' => ['ceklogin'],
         'prefix' => 'admins'
     ],
     function () {
@@ -28,5 +30,6 @@ Route::group(
 );
 
 Route::get('/logout', function () {
-    //
+    Session::flush();
+    return redirect('/')->with('message', '<div class="alert alert-success">Anda berhasil logout.</div>');
 })->name('logout');

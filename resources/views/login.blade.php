@@ -20,6 +20,9 @@
             </div>
             <!-- /.login-logo -->
             <div class="login-box-body">
+                @if(Session::has('message'))
+                    {!! Session::get('message') !!}
+                @endif
                 <p class="login-box-msg">Sign in to start your session</p>
 
                 <form action="#" method="POST">
