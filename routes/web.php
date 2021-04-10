@@ -32,7 +32,7 @@ Route::group(
 
         Route::get('/car', [CarController::class, 'index'])->name('car.index');
 
-        Route::get('/car-edit/{id}', [CarController::class, 'edit'])->name('car.edit');
+        Route::post('/car-edit', [CarController::class, 'edit'])->name('car.edit');
 
         Route::post('/car', [CarController::class, 'store'])->name('car.store');
 

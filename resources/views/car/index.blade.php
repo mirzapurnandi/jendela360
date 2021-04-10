@@ -148,8 +148,8 @@
 
         function caridata(id){
 			$.ajax({
-				url: "/admins/car-edit/" + id,
-				type: "GET",
+				url: "/admins/car-edit",
+				type: "POST",
 				data: { id : id },
 				dataType: "json",
 				cache: false,
