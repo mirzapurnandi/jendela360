@@ -42,7 +42,7 @@
                         <tr>
                             <td>{{ $key+1 }}</td>
                             <td>{{ $val->nama }}</td>
-                            <td>{{ $val->harga }}</td>
+                            <td>@currency($val->harga)</td>
                             <td>{{ $val->stok }}</td>
                             <td>
                                 <a href="#" class="btn btn-info btn-xs btn-edit" key="{{ $val->id }}"><i class="fa fa-pencil"></i> edit </a> &nbsp;

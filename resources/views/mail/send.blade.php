@@ -11,8 +11,8 @@ No HP: {{ $result->no_hp }}
 
 Mobil: {{ $result->car->nama }}
 
-Harga: {{ $result->car->harga }}
+Harga: @currency($result->car->harga)
 
-Thanks,<br>
+<br><br>Thanks,<br>
 {{ $result->nama }}
 @endcomponent
