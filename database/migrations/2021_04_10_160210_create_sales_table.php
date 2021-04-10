@@ -18,7 +18,7 @@ class CreateSalesTable extends Migration
             $table->string('nama');
             $table->string('email');
             $table->string('no_hp');
-            $table->integer('car_id');
+            $table->unsignedBigInteger('car_id');
             $table->foreign('car_id')->references('id')->on('cars')->onDelete('cascade');
             $table->timestamps();
         });
