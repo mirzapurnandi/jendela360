@@ -40,7 +40,7 @@ class HomeController extends Controller
                     ->leftJoin('cars', 's.car_id', '=', 'cars.id')
                     ->where('s.tanggal_jual', $tanggal)
                     ->groupBy('s.car_id')->orderBy('total', 'DESC')
-                    //->limit(1)
+                    ->limit(1)
                     ->get();
         return $result;
     }
