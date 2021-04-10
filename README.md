@@ -7,10 +7,9 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-
-<center> 
-    <img src="https://assets.jendela360.com/jendela/assets/images/svg/logo.svg" height="49px" width="auto"> 
+<p align="center">
+    <img src="https://assets.jendela360.com/jendela/assets/images/svg/logo.svg" height="49px" width="auto">
     # JENDELA360 
-</center>
+</p>
 
 ## Installer
