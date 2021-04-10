@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\HomeController;
 
 /*
@@ -15,9 +15,11 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', function () {
-    return view('login');
-});
+Route::get('/', [AuthController::class, 'index']);
+
+Route::post('/login', [AuthController::class, 'login'])->name('login');
+
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::group(
     [
@@ -28,8 +30,3 @@ Route::group(
         Route::get('/home', [HomeController::class, 'index'])->name('home');
     }
 );
-
-Route::get('/logout', function () {
-    Session::flush();
-    return redirect('/')->with('message', '<div class="alert alert-success">Anda berhasil logout.</div>');
-})->name('logout');
