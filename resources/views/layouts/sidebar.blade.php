@@ -18,8 +18,8 @@
                 <i class="fa fa-th"></i> <span>Beranda</span>
                 </a>
             </li>
-            <li>
-                <a href="#">
+            <li class="{{ request()->routeIs('car.index') ? 'active' : '' }}">
+                <a href="{{ route('car.index') }}">
                     <i class="fa fa-car"></i> <span>Data Mobil</span>
                 </a>
             </li>
